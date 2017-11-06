@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom';
+import Homepage from '../scenes/Homepage/index';
+import BookstoreList from '../scenes/BookstoreList/index';
 
-const Navbar = () => {
+class Navbar extends Component {
+  render(){
     return (
+           <Router>
               <nav className="navbar navbar-expand-lg navbar-light fixed-top">
                 <div classNameName="container">
                   <a classNameName="navbar-brand" href="#">
@@ -13,28 +22,32 @@ const Navbar = () => {
                   <div classNameName="collapse navbar-collapse" id="navbarResponsive">
                     <ul classNameName="navbar-nav ml-auto">
                       <li className="nav-item">
-                      <a href="#home" className="nav-link">Home</a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="#about" className="nav-link">About</a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="#authors" className="nav-link">Book Stores</a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="#contact" className="nav-link">Contact</a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="#sign-up" className="nav-link">Sign Up</a>
-                    </li>
-                    <li className="nav-item">
-                      <a href="#login" className="nav-link">Login</a>
-                    </li>
+                        <Link to="/" className="nav-link">Home</Link>
+                      </li>
+                      <li className="nav-item">
+                        <a href="#about" className="nav-link">About</a>
+                      </li>
+                      <li className="nav-item">
+                        <Link to="/BookStoreList" className="nav-link">BookStores</Link>
+                      </li>
+                      <li className="nav-item">
+                        <a href="#contact" className="nav-link">Contact</a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="#sign-up" className="nav-link">Sign Up</a>
+                      </li>
+                      <li className="nav-item">
+                        <a href="#login" className="nav-link">Login</a>
+                      </li>
                     </ul>
+                    <Route exact path="/" component={Homepage}/>
+                    <Route path="/BookStoreList" component={BookstoreList}/>
                   </div>
                 </div>
               </nav>
+          </Router>
         )
-    };
+    }
+  };
 
 export default Navbar;
