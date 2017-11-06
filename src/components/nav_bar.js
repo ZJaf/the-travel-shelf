@@ -12,15 +12,15 @@ class Navbar extends Component {
     return (
            <Router>
               <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-                <div classNameName="container">
-                  <a classNameName="navbar-brand" href="#">
-                    <img src={require('../img/ts-logo.jpg')} width="50" height="40" alt="travel-shelf logo" /><h4 classNameName="d-inline align-middle"> Travel Shelf</h4>
+                <div className="container">
+                  <a className="navbar-brand" href="#">
+                    <img src={require('../img/ts-logo.jpg')} width="50" height="40" alt="travel-shelf logo" /><h4 className="d-inline align-middle"> Travel Shelf</h4>
                   </a>
-                  <button classNameName="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span classNameName="navbar-toggler-icon"></span>
+                  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                   </button>
-                  <div classNameName="collapse navbar-collapse" id="navbarResponsive">
-                    <ul classNameName="navbar-nav ml-auto">
+                  <div className="collapse navbar-collapse" id="navbarResponsive">
+                    <ul className="navbar-nav ml-auto">
                       <li className="nav-item">
                         <Link to="/" className="nav-link">Home</Link>
                       </li>
